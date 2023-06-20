@@ -1,0 +1,47 @@
+.actorInfoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.actorCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-top: 20px;
+    margin-right: 10px;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
+    background-color: aliceblue;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.actorCard:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.actorImg {
+    border-radius: 5px;
+    margin: 0 10px;
+    width: 150px;
+    height: 220px;
+}
+
+.actorName {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.actorCharacter {
+
+    width: 120px;
+    font-size: 14px;
+    font-weight: 500;
+}

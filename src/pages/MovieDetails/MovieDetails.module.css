@@ -1,0 +1,38 @@
+.movieDetailsContainer {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+
+.moviePoster {
+    border-radius: 5px;
+    width: 350px;
+}
+
+.movieInfo {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    margin-left: 10px;
+}
+
+
+.additionalInfo {
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+}
+
+.addLink {
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-right: 25px;
+    list-style: none;
+    text-decoration: none;
+    color: black
+}
+
+.addLink:hover {
+    color: blue
+}
