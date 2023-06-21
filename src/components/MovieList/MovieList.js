@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import noImg from '../../image/placeholder.png';
 import css from './MovieList.module.css';
 
@@ -23,5 +24,15 @@ const MovieList = ({ movies }) => {
       ))}
     </ul>
   );
+};
+
+MovieList.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      poster_path: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+    })
+  ),
 };
 export default MovieList;

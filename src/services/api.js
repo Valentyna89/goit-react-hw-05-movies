@@ -49,3 +49,16 @@ export const getReviews = async id => {
     console.error(error);
   }
 };
+
+export const getMovieBySearch = async (search, page = 1) => {
+  try {
+    const { data } = await axios.get(
+      `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${search}&page=${page}&languages=en-US`
+    );
+    const results = data.results;
+
+    return results;
+  } catch (error) {
+    console.error(error);
+  }
+};

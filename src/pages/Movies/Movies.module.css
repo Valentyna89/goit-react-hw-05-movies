@@ -1,30 +1,46 @@
-.inputContainer {
+.searchedMoviesList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-
-    margin-top: 15px;
+    align-items: baseline;
+    background-color: white;
 }
 
-.input {
-    border: none;
-    box-shadow: 0.5px 0.5px 2px 0.5px gray;
-    display: inline-block;
-    font-family: inherit;
-    font-size: 20px;
-    outline: none;
-    padding-left: 10px;
-    padding-right: 10px;
-
+.searchedMovieItem {
+    max-width: 300px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    padding: 10px;
+    flex-basis: calc((100%) - 60px);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
+    background-color: lavender;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
-.searchBtn {
-    margin-left: 10px;
-    font-size: 16px;
-    padding: 4px;
-    width: 70px;
-    background-color: aliceblue;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 1px 1px 2px 1px gray;
+.searchedMovieItem:hover {
+    transform: scale(1.03);
+    cursor: zoom-in;
+}
+
+.searchedMovieImg {
+    max-width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.searchedMovieTitle {
+    font-size: 14px;
+    line-height: 1.16;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+    text-decoration: none;
 }

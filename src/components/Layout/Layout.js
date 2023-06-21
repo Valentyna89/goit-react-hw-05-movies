@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 import css from './Layout.module.css';
 
 const Layout = () => {
@@ -14,7 +15,9 @@ const Layout = () => {
       </div>
 
       <main>
-        <Outlet />
+        <Suspense>
+          <Outlet />
+        </Suspense>
       </main>
     </div>
   );

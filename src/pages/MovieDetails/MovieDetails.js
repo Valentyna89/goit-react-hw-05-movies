@@ -7,15 +7,11 @@ const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState({});
 
-  // const location = useLocation();
-
   useEffect(() => {
     getMovieById(movieId)
       .then(setMovie)
       .catch(error => console.log(error));
   }, [movieId]);
-
-  // const releaseYear = new Date(movie?.release_date).getFullYear();
 
   return (
     <>
@@ -36,6 +32,7 @@ const MovieDetails = () => {
       </div>
 
       <div className={css.additionalInfo}>
+        <h5 className={css.addInfo}>Aditional information:</h5>
         <Link to="cast" className={css.addLink}>
           Cast
         </Link>
