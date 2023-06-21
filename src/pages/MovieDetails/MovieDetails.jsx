@@ -15,6 +15,9 @@ const MovieDetails = () => {
 
   return (
     <>
+      <Link to="/" className={css.goBackLink}>
+        Go back
+      </Link>
       <div className={css.movieDetailsContainer}>
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
@@ -27,7 +30,14 @@ const MovieDetails = () => {
           <h5>Overview</h5>
           <p>{movie.overview}</p>
           <h5>Genres</h5>
-          <p></p>
+          <ul className={css.movieGenresList}>
+            {movie.genres &&
+              movie.genres.map(genre => (
+                <li key={genre.id} className={css.movieGenres}>
+                  {genre.name}
+                </li>
+              ))}
+          </ul>
         </div>
       </div>
 

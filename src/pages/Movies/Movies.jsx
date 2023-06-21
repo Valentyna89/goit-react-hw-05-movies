@@ -43,7 +43,7 @@ const Movies = () => {
 
   return (
     <>
-      <SearchForm onSubmit={onFormSubmit} />;
+      <SearchForm onSubmit={onFormSubmit} />
       <ul className={css.searchedMoviesList}>
         {search.map(movie => (
           <li key={movie.id} className={css.searchedMovieItem}>
