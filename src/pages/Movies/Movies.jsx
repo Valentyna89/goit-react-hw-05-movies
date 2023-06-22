@@ -30,8 +30,6 @@ const Movies = () => {
 
     const form = e.currentTarget;
 
-    console.log(form.elements.query.value);
-
     if (form.elements.query.value === '') {
       alert('Please enter search word!');
       return setSearchParams({});

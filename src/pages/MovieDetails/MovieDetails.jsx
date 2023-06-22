@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
-import { useParams, Link, Outlet } from 'react-router-dom';
+import { useEffect, useState, useRef } from 'react';
+import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { getMovieById } from '../../services/api';
 import css from './MovieDetails.module.css';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState({});
+  const location = useLocation();
+  const goBackRef = useRef(location.state?.from ?? '/');
 
   useEffect(() => {
     getMovieById(movieId)
@@ -15,7 +17,7 @@ const MovieDetails = () => {
 
   return (
     <>
-      <Link to="/" className={css.goBackLink}>
+      <Link to={goBackRef.current} className={css.goBackButton}>
         Go back
       </Link>
       <div className={css.movieDetailsContainer}>
